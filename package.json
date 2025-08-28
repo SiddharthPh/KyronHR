@@ -3,7 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "description": "Professional HR Portal for Kyron HR",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
