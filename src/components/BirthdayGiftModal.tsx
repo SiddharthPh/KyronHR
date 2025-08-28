@@ -23,11 +23,16 @@ const BirthdayGiftModal: React.FC<BirthdayGiftModalProps> = ({ brand, onClose })
   const [deliveryDate, setDeliveryDate] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const item = brand.items[0];
-  const currencySymbol = item.currencyCode === 'USD' ? '$' : item.currencyCode === 'EUR' ? '€' : '£';
+  const item = brand.items?.[0];
+  const currencySymbol = item?.currencyCode === 'USD' ? '$' : item?.currencyCode === 'EUR' ? '€' : '£';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!item) {
+      alert('Error: Invalid gift card data');
+      return;
+    }
     
     if (!selectedEmployee || !amount || !deliveryDate) {
       alert('Please fill in all required fields');
@@ -35,7 +40,7 @@ const BirthdayGiftModal: React.FC<BirthdayGiftModalProps> = ({ brand, onClose })
     }
 
     const numAmount = parseFloat(amount);
-    if (numAmount < item.minValue || numAmount > item.maxValue) {
+    if (isNaN(numAmount) || numAmount < item.minValue || numAmount > item.maxValue) {
       alert(`Amount must be between ${currencySymbol}${item.minValue} and ${currencySymbol}${item.maxValue}`);
       return;
     }
@@ -75,6 +80,26 @@ const BirthdayGiftModal: React.FC<BirthdayGiftModalProps> = ({ brand, onClose })
   // Get today's date for min date picker value
   const today = new Date().toISOString().split('T')[0];
 
+  // Early return if no valid item data
+  if (!item) {
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
+          <div className="text-center">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Error</h3>
+            <p className="text-gray-600 mb-4">Invalid gift card data. Please try again.</p>
+            <button
+              onClick={onClose}
+              className="bg-kyron-primary text-white px-4 py-2 rounded-lg hover:bg-kyron-primary/90 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
@@ -86,11 +111,12 @@ const BirthdayGiftModal: React.FC<BirthdayGiftModalProps> = ({ brand, onClose })
               alt={brand.brandName}
               className="w-10 h-10 object-contain"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = `data:image/svg+xml;base64,${btoa(`
+                const target = e.target as HTMLImageElement;
+                target.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(`
                   <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40" fill="#f3f4f6"/>
                     <text x="20" y="25" font-family="Arial" font-size="10" text-anchor="middle" fill="#6b7280">
-                      ${brand.brandName}
+                      ${brand.brandName.replace(/[<>&'"]/g, '')}
                     </text>
                   </svg>
                 `)}`;

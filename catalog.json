@@ -1,6 +1,6 @@
 {
   "catalogName": "Gift Card Rewards Catalog",
-  "totalBrands": 9,
+  "totalBrands": 49,
   "brands": [
     {
       "brandKey": "B644898",
@@ -141,6 +141,826 @@
           "fulfillmentType": "DIGITAL"
         }
       ]
+    },
+    {
+      "brandKey": "B461344",
+      "brandName": "Always Fail",
+      "description": "Always Fails",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b461344-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U923469",
+          "rewardName": "Always Fail Reward Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B357487",
+      "brandName": "Starbucks Malaysia",
+      "description": "Since 1971, Starbucks Coffee Company has been committed to ethically sourcing and roasting high-quality arabica coffee.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b357487-200w-326ppi.png",
+      "status": "active",
+      "category": "Beverage",
+      "rewardType": "gift card",
+      "items": [
+        {
+          "utid": "U993887",
+          "rewardName": "Starbucks Kad RM20",
+          "currencyCode": "MYR",
+          "minValue": 20,
+          "maxValue": 20,
+          "countries": ["MY"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B036961",
+      "brandName": "Suicide Prevention Services",
+      "description": "Suicide Prevention Services vision and mission is to open minds, save lives, and restore hope through prevention, intervention, and postvention using education, advocacy, and collaboration.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b036961-200w-326ppi.png",
+      "status": "active",
+      "category": "Donation",
+      "rewardType": "donation",
+      "items": [
+        {
+          "utid": "U390457",
+          "rewardName": "Suicide Prevention Services Donation",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B676439",
+      "brandName": "Virtual Promotional Prepaid Mastercard® USD",
+      "description": "Your Virtual Promotional Prepaid Mastercard can be used online at U.S. merchants where Debit Mastercard is accepted.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b676439-200w-326ppi.png",
+      "status": "active",
+      "category": "Prepaid & Cash Transfer",
+      "rewardType": "cash equivalent",
+      "items": [
+        {
+          "utid": "U053990",
+          "rewardName": "Virtual Promotional Prepaid Mastercard®",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B022724",
+      "brandName": "Water.org",
+      "description": "771 million people — about 1 in 10 — lack access to safe water; 1.7 billion — about 1 in 4 — lack access to a toilet. Water.org exists to change this by empowering people in need.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b022724-200w-326ppi.png",
+      "status": "active",
+      "category": "Donation",
+      "rewardType": "donation",
+      "items": [
+        {
+          "utid": "U988566",
+          "rewardName": "Water.org Donation",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B092170",
+      "brandName": "Disbursement Link - Test",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b488254-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "gift card",
+      "items": [
+        {
+          "utid": "U735567",
+          "rewardName": "Disbursement Link - Test",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B711629",
+      "brandName": "Disbursement Link",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b711629-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U117096",
+          "rewardName": "Disbursement Link PayPal Test",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B080632",
+      "brandName": "Disbursement Link - Winmark",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b080632-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U978790",
+          "rewardName": "Disbursement Link - Winmark",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B215373",
+      "brandName": "HomeStory Disbursement Link",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b215373-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U198808",
+          "rewardName": "HomeStory Disbursement Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 20000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B474857",
+      "brandName": "Disbursement Link Music Go Round Payment",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b474857-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U283213",
+          "rewardName": "Music Go Round Payment Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B685890",
+      "brandName": "Disbursement Link Once Upon a Child Payment",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b685890-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U409474",
+          "rewardName": "Once Upon a Child Payment Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B060588",
+      "brandName": "Disbursement Link Plato's Closet Payment",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b060588-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U600267",
+          "rewardName": "Plato's Closet Payment Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B040851",
+      "brandName": "Disbursement Link Play It Again Sports Payment",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b040851-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U503831",
+          "rewardName": "Play It Again Sports Payment Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B127067",
+      "brandName": "Promo Link Demo",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b127067-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U088323",
+          "rewardName": "Promo Link Demo",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B794267",
+      "brandName": "Reward Link Australia",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b794267-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U364557",
+          "rewardName": "Reward Link Australia",
+          "currencyCode": "AUD",
+          "minValue": 1,
+          "maxValue": 2000,
+          "countries": ["AU"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B905474",
+      "brandName": "Club Wyndham - Club Management",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b905474-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U014047",
+          "rewardName": "Club Wyndham - Club Management",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B745580",
+      "brandName": "Reward Link France (Global Catalog)",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts in multiple languages.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b745580-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U976833",
+          "rewardName": "Reward Link France (Global Catalog)",
+          "currencyCode": "EUR",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["FR"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B089252",
+      "brandName": "Reward Link Mexico + Amazon",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts with Amazon integration for Mexico.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b089252-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U134040",
+          "rewardName": "Reward Link Mexico + Amazon",
+          "currencyCode": "MXN",
+          "minValue": 50,
+          "maxValue": 35000,
+          "countries": ["MX"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B461344",
+      "brandName": "Always Fail",
+      "description": "Always Fails",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b461344-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U923469",
+          "rewardName": "Always Fail Reward Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B093128",
+      "brandName": "CDC Foundation",
+      "description": "The CDC Foundation is an independent nonprofit and the sole entity created by Congress to mobilize philanthropic and private-sector resources to support the Centers for Disease Control and Prevention's critical health protection work.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b093128-200w-326ppi.png",
+      "status": "active",
+      "category": "Donation",
+      "rewardType": "donation",
+      "items": [
+        {
+          "utid": "U254054",
+          "rewardName": "CDC Foundation Donation",
+          "currencyCode": "USD",
+          "minValue": 3,
+          "maxValue": 500,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B912569",
+      "brandName": "Deposit to PayPal",
+      "description": "Redeem balance directly into your PayPal account once you have logged into your account. Funds are usually available within 30 minutes.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b912569-200w-326ppi.png",
+      "status": "active",
+      "category": "Prepaid & Cash Transfer",
+      "rewardType": "payment-paypal",
+      "items": [
+        {
+          "utid": "U781792",
+          "rewardName": "Deposit to PayPal",
+          "currencyCode": "USD",
+          "minValue": 1,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B092170",
+      "brandName": "Disbursement Link - Test",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b488254-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "gift card",
+      "items": [
+        {
+          "utid": "U735567",
+          "rewardName": "Disbursement Link - Test",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B711629",
+      "brandName": "Disbursement Link",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b711629-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U117096",
+          "rewardName": "Disbursement Link PayPal Test",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B080632",
+      "brandName": "Disbursement Link - Winmark",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b080632-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U978790",
+          "rewardName": "Disbursement Link - Winmark",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B215373",
+      "brandName": "HomeStory Disbursement Link",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b215373-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U198808",
+          "rewardName": "HomeStory Disbursement Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 20000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B474857",
+      "brandName": "Disbursement Link Music Go Round Payment",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b474857-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U283213",
+          "rewardName": "Music Go Round Payment Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B685890",
+      "brandName": "Disbursement Link Once Upon a Child Payment",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b685890-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U409474",
+          "rewardName": "Once Upon a Child Payment Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B060588",
+      "brandName": "Disbursement Link Plato's Closet Payment",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b060588-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U600267",
+          "rewardName": "Plato's Closet Payment Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B040851",
+      "brandName": "Disbursement Link Play It Again Sports Payment",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b040851-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U885444",
+          "rewardName": "Play It Again Sports Payment Link",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B127067",
+      "brandName": "Promo Link Demo",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b127067-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U088323",
+          "rewardName": "Promo Link Demo",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B794267",
+      "brandName": "Reward Link Australia",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b794267-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U364557",
+          "rewardName": "Reward Link Australia",
+          "currencyCode": "AUD",
+          "minValue": 1,
+          "maxValue": 2000,
+          "countries": ["AU"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B905474",
+      "brandName": "Club Wyndham - Club Management",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b905474-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U014047",
+          "rewardName": "Club Wyndham - Club Management",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B745580",
+      "brandName": "Reward Link France (Global Catalog)",
+      "description": "Les produits Tango Choice sont le moyen le plus simple d'envoyer des récompenses, des incitations et des paiements. Ils permettent à vos destinataires de choisir parmi des catalogues de cartes-cadeaux numériques, de cartes prépayées, de dons de bienfaisance et de paiements numériques.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b745580-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U976833",
+          "rewardName": "Reward Link France (Global Catalog)",
+          "currencyCode": "EUR",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["FR"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B548319",
+      "brandName": "Reward Link Poland (Global Catalog)",
+      "description": "Produkty Tango Choice to najłatwiejszy sposób wysyłania nagród, zachęt i wypłat. Umożliwiają odbiorcom wybór z katalogu cyfrowych kart podarunkowych, kart przedpłaconych, wpłat na cele charytatywne i cyfrowych wypłat.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b548319-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U256071",
+          "rewardName": "Reward Link Poland (Global Catalog)",
+          "currencyCode": "PLN",
+          "minValue": 10,
+          "maxValue": 8000,
+          "countries": ["PL"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B077325",
+      "brandName": "Reward Link Preferred + Donations",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b077325-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U561593",
+          "rewardName": "Reward Link Preferred + Donations",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B017241",
+      "brandName": "Reward Link Preferred + Donations (Global Catalog)",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b017241-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U686104",
+          "rewardName": "Reward Link Preferred + Donations (Global Catalog)",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B986809",
+      "brandName": "Reward Link US",
+      "description": "Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b986809-200w-326ppi.png",
+      "status": "active",
+      "category": "Other",
+      "rewardType": "reward link",
+      "items": [
+        {
+          "utid": "U957978",
+          "rewardName": "Reward Link US",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B036961",
+      "brandName": "Suicide Prevention Services",
+      "description": "Suicide prevention Services, a 25 year old not-for-profit started as a grassroots organization by 8 women who had had loved ones die by suicide. It has grown into (still a not-for-profit) an agency that provides counseling and hascontracts with 5 school districts to counsel students at risk.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b036961-200w-326ppi.png",
+      "status": "active",
+      "category": "Donation",
+      "rewardType": "donation",
+      "items": [
+        {
+          "utid": "U390457",
+          "rewardName": "Suicide Prevention Services Donation",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B266419",
+      "brandName": "Virtual Promotional Prepaid Mastercard - USA & International Acceptance",
+      "description": "Your Virtual Promotional Prepaid Mastercard can be used online at merchants where Debit Mastercard is accepted. Or if you prefer, add the card to your mobile wallet and shop in-stores that accept mobile wallet.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b266419-200w-326ppi.png",
+      "status": "active",
+      "category": "Prepaid & Cash Transfer",
+      "rewardType": "cash equivalent",
+      "items": [
+        {
+          "utid": "U420079",
+          "rewardName": "Virtual Promotional Prepaid Mastercard - USA & International Acceptance",
+          "currencyCode": "USD",
+          "minValue": 5,
+          "maxValue": 1000,
+          "countries": ["PR", "PS", "PT", "PW", "PY", "QA", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "RE", "AT", "AU", "AW", "AX", "AZ", "RO", "BA", "BB", "RS", "BD", "BE", "BF", "RW", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "SA", "BQ", "SB", "BR", "SC", "SD", "BS", "SE", "BT", "SG", "BV", "BW", "SH", "SI", "SJ", "BZ", "SK", "SL", "SM", "SN", "SO", "CA", "SR", "SS", "CC", "ST", "SV", "CF", "CG", "CH", "SX", "CI", "SZ", "CK", "CL", "CM", "CN", "CO", "CR", "TC", "TD", "TF", "CV", "TG", "TH", "CW", "CX", "CY", "TJ", "CZ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "DE", "TV", "TW", "DJ", "TZ", "DK", "DM", "DO", "UA", "UG", "DZ", "UM", "UN", "US", "EC", "EE", "EG", "EH", "UY", "UZ", "VA", "ER", "VC", "ES", "ET", "VE", "VG", "VI", "VN", "VU", "FI", "FJ", "FK", "FM", "FO", "FR", "WF", "GA", "GB", "WS", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "YE", "HT", "HU", "YT", "ID", "IE", "IL", "IM", "IN", "IO", "ZA", "IQ", "IS", "IT", "ZM", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B676439",
+      "brandName": "Virtual Promotional Prepaid Mastercard® USD",
+      "description": "Your Virtual Promotional Prepaid Mastercard can be used online at U.S. merchants where Debit Mastercard is accepted. Or if you prefer, add the card to your mobile wallet and shop in-stores that accept mobile wallet.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b676439-200w-326ppi.png",
+      "status": "active",
+      "category": "Prepaid & Cash Transfer",
+      "rewardType": "cash equivalent",
+      "items": [
+        {
+          "utid": "U053990",
+          "rewardName": "Virtual Promotional Prepaid Mastercard® ",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B022724",
+      "brandName": "Water.org",
+      "description": "771 million people — about 1 in 10 — lack access to safe water; 1.7 billion — about 1 in 4 — lack access to a toilet. Water.org exists to change this by empowering people in need with access to small, affordable loans for water and sanitation solutions at home.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b022724-200w-326ppi.png",
+      "status": "active",
+      "category": "Donation",
+      "rewardType": "donation",
+      "items": [
+        {
+          "utid": "U988566",
+          "rewardName": "Water.org Donation",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
     }
   ],
   "categories": [
@@ -148,6 +968,7 @@
     "Digital Media",
     "Donation",
     "Prepaid & Cash Transfer",
-    "Beverage"
+    "Beverage",
+    "Other"
   ]
 }

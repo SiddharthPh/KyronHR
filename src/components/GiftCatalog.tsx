@@ -1,11 +1,17 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, Gift } from 'lucide-react';
+import { Search, Filter, Gift, Globe, DollarSign } from 'lucide-react';
 import type { Brand, Catalog } from '../types/catalog';
 import catalogData from '../../catalog.json';
 import BirthdayGiftModal from './BirthdayGiftModal';
 
 const GiftCard: React.FC<{ brand: Brand; onSendGift: (brand: Brand) => void }> = ({ brand, onSendGift }) => {
-  const item = brand.items[0]; // Using first item for display
+  const item = brand.items?.[0]; // Using first item for display
+  
+  // Don't render if no valid item data
+  if (!item) {
+    return null;
+  }
+  
   const currencySymbol = item.currencyCode === 'USD' ? '$' : item.currencyCode === 'EUR' ? '€' : '£';
   
   return (
@@ -16,11 +22,12 @@ const GiftCard: React.FC<{ brand: Brand; onSendGift: (brand: Brand) => void }> =
           alt={brand.brandName}
           className="max-h-20 max-w-full object-contain"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = `data:image/svg+xml;base64,${btoa(`
+            const target = e.target as HTMLImageElement;
+            target.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(`
               <svg width="80" height="40" xmlns="http://www.w3.org/2000/svg">
                 <rect width="80" height="40" fill="#f3f4f6"/>
                 <text x="40" y="25" font-family="Arial" font-size="12" text-anchor="middle" fill="#6b7280">
-                  ${brand.brandName}
+                  ${brand.brandName.replace(/[<>&'"]/g, '')}
                 </text>
               </svg>
             `)}`;
@@ -32,16 +39,30 @@ const GiftCard: React.FC<{ brand: Brand; onSendGift: (brand: Brand) => void }> =
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{brand.brandName}</h3>
         <p className="text-sm text-gray-600 mb-4 line-clamp-2">{brand.description}</p>
         
-        <div className="flex items-center justify-between mb-4">
-          <div className="text-sm">
-            <span className="text-gray-500">Value Range:</span>
-            <div className="font-medium text-kyron-primary">
-              {currencySymbol}{item.minValue} - {currencySymbol}{item.maxValue}
+        <div className="space-y-3 mb-4">
+          <div className="flex items-center justify-between">
+            <div className="text-sm">
+              <span className="text-gray-500">Value Range:</span>
+              <div className="font-medium text-kyron-primary">
+                {currencySymbol}{item.minValue} - {currencySymbol}{item.maxValue}
+              </div>
+            </div>
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-kyron-primary/10 text-kyron-primary">
+              {brand.category}
+            </span>
+          </div>
+          
+          {/* Currency and Countries Info */}
+          <div className="flex items-center justify-between text-xs text-gray-500">
+            <div className="flex items-center gap-1">
+              <DollarSign className="w-3 h-3" />
+              <span>{item.currencyCode}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Globe className="w-3 h-3" />
+              <span>{item.countries?.slice(0, 3).join(', ')}{item.countries && item.countries.length > 3 ? ` +${item.countries.length - 3}` : ''}</span>
             </div>
           </div>
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-kyron-primary/10 text-kyron-primary">
-            {brand.category}
-          </span>
         </div>
         
         <button
@@ -59,19 +80,53 @@ const GiftCard: React.FC<{ brand: Brand; onSendGift: (brand: Brand) => void }> =
 const GiftCatalog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState('');
+  const [selectedCurrency, setSelectedCurrency] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null);
 
   const catalog = catalogData as Catalog;
+
+  // Extract unique countries and currencies from catalog
+  const availableCountries = useMemo(() => {
+    const countries = new Set<string>();
+    catalog.brands.forEach(brand => {
+      brand.items?.forEach(item => {
+        item.countries?.forEach(country => countries.add(country));
+      });
+    });
+    return Array.from(countries).sort();
+  }, [catalog.brands]);
+
+  const availableCurrencies = useMemo(() => {
+    const currencies = new Set<string>();
+    catalog.brands.forEach(brand => {
+      brand.items?.forEach(item => {
+        if (item.currencyCode) {
+          currencies.add(item.currencyCode);
+        }
+      });
+    });
+    return Array.from(currencies).sort();
+  }, [catalog.brands]);
 
   const filteredBrands = useMemo(() => {
     return catalog.brands.filter(brand => {
       const matchesSearch = brand.brandName.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           brand.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === '' || brand.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      
+      // Check if brand has items that match the selected country
+      const matchesCountry = selectedCountry === '' || 
+        brand.items?.some(item => item.countries?.includes(selectedCountry));
+      
+      // Check if brand has items that match the selected currency
+      const matchesCurrency = selectedCurrency === '' || 
+        brand.items?.some(item => item.currencyCode === selectedCurrency);
+      
+      return matchesSearch && matchesCategory && matchesCountry && matchesCurrency;
     });
-  }, [searchTerm, selectedCategory, catalog.brands]);
+  }, [searchTerm, selectedCategory, selectedCountry, selectedCurrency, catalog.brands]);
 
   const handleSendGift = (brand: Brand) => {
     setSelectedBrand(brand);
@@ -97,8 +152,9 @@ const GiftCatalog: React.FC = () => {
           </div>
           
           {/* Search and Filters */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <div className="relative flex-1">
+          <div className="space-y-4">
+            {/* Search Bar */}
+            <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -109,18 +165,67 @@ const GiftCatalog: React.FC = () => {
               />
             </div>
             
-            <div className="relative min-w-[200px]">
-              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kyron-primary focus:border-transparent appearance-none bg-white"
-              >
-                <option value="">All Categories</option>
-                {catalog.categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-              </select>
+            {/* Filter Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Category Filter */}
+              <div className="relative">
+                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kyron-primary focus:border-transparent appearance-none bg-white"
+                >
+                  <option value="">All Categories</option>
+                  {catalog.categories.map(category => (
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Country Filter */}
+              <div className="relative">
+                <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedCountry}
+                  onChange={(e) => setSelectedCountry(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kyron-primary focus:border-transparent appearance-none bg-white"
+                >
+                  <option value="">All Countries</option>
+                  {availableCountries.map(country => (
+                    <option key={country} value={country}>{country}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Currency Filter */}
+              <div className="relative">
+                <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedCurrency}
+                  onChange={(e) => setSelectedCurrency(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kyron-primary focus:border-transparent appearance-none bg-white"
+                >
+                  <option value="">All Currencies</option>
+                  {availableCurrencies.map(currency => (
+                    <option key={currency} value={currency}>{currency}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Clear Filters Button */}
+              <div className="flex items-center">
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('');
+                    setSelectedCountry('');
+                    setSelectedCurrency('');
+                  }}
+                  className="w-full px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                >
+                  Clear Filters
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -128,11 +233,65 @@ const GiftCatalog: React.FC = () => {
 
       {/* Results Summary */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <p className="text-gray-600">
-          Showing {filteredBrands.length} of {catalog.totalBrands} rewards
-          {selectedCategory && ` in "${selectedCategory}"`}
-          {searchTerm && ` matching "${searchTerm}"`}
-        </p>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-gray-600">
+            Showing {filteredBrands.length} of {catalog.totalBrands} rewards
+            {selectedCategory && ` in "${selectedCategory}"`}
+            {selectedCountry && ` for "${selectedCountry}"`}
+            {selectedCurrency && ` in "${selectedCurrency}"`}
+            {searchTerm && ` matching "${searchTerm}"`}
+          </p>
+          
+          {/* Active Filters Tags */}
+          {(selectedCategory || selectedCountry || selectedCurrency || searchTerm) && (
+            <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
+              {selectedCategory && (
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  Category: {selectedCategory}
+                  <button
+                    onClick={() => setSelectedCategory('')}
+                    className="ml-1 text-blue-600 hover:text-blue-800"
+                  >
+                    ×
+                  </button>
+                </span>
+              )}
+              {selectedCountry && (
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                  Country: {selectedCountry}
+                  <button
+                    onClick={() => setSelectedCountry('')}
+                    className="ml-1 text-green-600 hover:text-green-800"
+                  >
+                    ×
+                  </button>
+                </span>
+              )}
+              {selectedCurrency && (
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                  Currency: {selectedCurrency}
+                  <button
+                    onClick={() => setSelectedCurrency('')}
+                    className="ml-1 text-purple-600 hover:text-purple-800"
+                  >
+                    ×
+                  </button>
+                </span>
+              )}
+              {searchTerm && (
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                  Search: {searchTerm}
+                  <button
+                    onClick={() => setSearchTerm('')}
+                    className="ml-1 text-yellow-600 hover:text-yellow-800"
+                  >
+                    ×
+                  </button>
+                </span>
+              )}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Gift Cards Grid */}
