@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel-build": "npm install --registry https://registry.npmjs.org && npm run build"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
