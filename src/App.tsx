@@ -6,6 +6,7 @@ import BoardingManagement from './pages/BoardingManagement';
 import PerformanceGoals from './pages/PerformanceGoals';
 import TimeOffManagement from './pages/TimeOffManagement';
 import Settings from './pages/Settings';
+import GiftCatalog from './components/GiftCatalog';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="boarding" element={<BoardingManagement />} />
           <Route path="performance" element={<PerformanceGoals />} />
           <Route path="timeoff" element={<TimeOffManagement />} />
+          <Route path="gift-catalog" element={<GiftCatalog />} />
           <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>

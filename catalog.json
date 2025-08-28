@@ -1,0 +1,153 @@
+{
+  "catalogName": "Gift Card Rewards Catalog",
+  "totalBrands": 9,
+  "brands": [
+    {
+      "brandKey": "B644898",
+      "brandName": "Amazon.co.uk",
+      "description": "Amazon.co.uk Gift Cards can be redeemed towards millions of items at www.amazon.co.uk.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-200w-326ppi.png",
+      "status": "active",
+      "category": "Marketplaces & Department Stores",
+      "rewardType": "gift card",
+      "items": [
+        {
+          "utid": "U173016",
+          "rewardName": "Amazon.co.uk Gift Card",
+          "currencyCode": "GBP",
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "countries": ["GB", "IE"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B916708",
+      "brandName": "Amazon.com",
+      "description": "Amazon.com Gift Cards never expire and can be redeemed towards millions of items at www.amazon.com.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b916708-200w-326ppi.png",
+      "status": "active",
+      "category": "Marketplaces & Department Stores",
+      "rewardType": "gift card",
+      "items": [
+        {
+          "utid": "U163059",
+          "rewardName": "Amazon eGift Card",
+          "currencyCode": "USD",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B440379",
+      "brandName": "Apple IT",
+      "description": "Use Apple Gift Card to get products, accessories, apps, games, music, movies, TV shows and more.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b440379-200w-326ppi.png",
+      "status": "active",
+      "category": "Digital Media",
+      "rewardType": "gift card",
+      "items": [
+        {
+          "utid": "U468761",
+          "rewardName": "Apple IT eGift",
+          "currencyCode": "EUR",
+          "minValue": 2,
+          "maxValue": 250,
+          "countries": ["IT"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B093128",
+      "brandName": "CDC Foundation",
+      "description": "The CDC Foundation mobilizes philanthropic and private-sector resources to support the Centers for Disease Control and Prevention's critical health protection work.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b093128-200w-326ppi.png",
+      "status": "active",
+      "category": "Donation",
+      "rewardType": "donation",
+      "items": [
+        {
+          "utid": "U254054",
+          "rewardName": "CDC Foundation Donation",
+          "currencyCode": "USD",
+          "minValue": 3,
+          "maxValue": 500,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B912569",
+      "brandName": "Deposit to PayPal",
+      "description": "Redeem balance directly into your PayPal account once you have logged into your account. Funds are usually available within 30 minutes.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b912569-200w-326ppi.png",
+      "status": "active",
+      "category": "Prepaid & Cash Transfer",
+      "rewardType": "payment-paypal",
+      "items": [
+        {
+          "utid": "U781792",
+          "rewardName": "Deposit to PayPal",
+          "currencyCode": "USD",
+          "minValue": 1,
+          "maxValue": 2000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B942204",
+      "brandName": "Starbucks",
+      "description": "A Starbucks Card can bring a little goodness into everyone's day. Redeem it at thousands of Starbucks locations.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b942204-200w-326ppi.png",
+      "status": "active",
+      "category": "Beverage",
+      "rewardType": "gift card",
+      "items": [
+        {
+          "utid": "U761382",
+          "rewardName": "Starbucks Card",
+          "currencyCode": "USD",
+          "minValue": 5,
+          "maxValue": 500,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B266419",
+      "brandName": "Virtual Prepaid Mastercard",
+      "description": "Virtual Promotional Prepaid Mastercard can be used online at merchants where Debit Mastercard is accepted.",
+      "imageUrl": "https://dwwvg90koz96l.cloudfront.net/images/brands/b266419-200w-326ppi.png",
+      "status": "active",
+      "category": "Prepaid & Cash Transfer",
+      "rewardType": "cash equivalent",
+      "items": [
+        {
+          "utid": "U420079",
+          "rewardName": "Virtual Promotional Prepaid Mastercard - USA & International Acceptance",
+          "currencyCode": "USD",
+          "minValue": 5,
+          "maxValue": 1000,
+          "countries": ["US"],
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "Marketplaces & Department Stores",
+    "Digital Media",
+    "Donation",
+    "Prepaid & Cash Transfer",
+    "Beverage"
+  ]
+}
