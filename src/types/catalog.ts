@@ -26,6 +26,25 @@ export interface Catalog {
   categories: string[];
 }
 
+export interface CartItem {
+  id: string;
+  brand: Brand;
+  catalogItem: CatalogItem;
+  amount: number;
+  recipient?: {
+    name: string;
+    email: string;
+  };
+  message?: string;
+  quantity: number;
+}
+
+export interface Cart {
+  items: CartItem[];
+  totalAmount: number;
+  totalItems: number;
+}
+
 export interface Employee {
   id: string;
   name: string;

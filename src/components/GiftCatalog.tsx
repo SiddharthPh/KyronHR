@@ -2,9 +2,11 @@ import React, { useState, useMemo } from 'react';
 import { Search, Filter, Gift, Globe, DollarSign } from 'lucide-react';
 import type { Brand, Catalog } from '../types/catalog';
 import catalogData from '../../catalog.json';
-import BirthdayGiftModal from './BirthdayGiftModal';
+import GiftCardModal from './GiftCardModal';
+import Cart from './Cart';
+import { CartProvider } from '../contexts/CartContext';
 
-const GiftCard: React.FC<{ brand: Brand; onSendGift: (brand: Brand) => void }> = ({ brand, onSendGift }) => {
+const GiftCard: React.FC<{ brand: Brand; onViewDetails: (brand: Brand) => void }> = ({ brand, onViewDetails }) => {
   const item = brand.items?.[0]; // Using first item for display
   
   // Don't render if no valid item data
@@ -66,11 +68,11 @@ const GiftCard: React.FC<{ brand: Brand; onSendGift: (brand: Brand) => void }> =
         </div>
         
         <button
-          onClick={() => onSendGift(brand)}
+          onClick={() => onViewDetails(brand)}
           className="w-full bg-kyron-primary text-white py-2 px-4 rounded-lg font-medium hover:bg-kyron-primary/90 transition-colors duration-200 flex items-center justify-center gap-2"
         >
           <Gift className="w-4 h-4" />
-          Send as Birthday Gift
+          View Details
         </button>
       </div>
     </div>
@@ -128,7 +130,7 @@ const GiftCatalog: React.FC = () => {
     });
   }, [searchTerm, selectedCategory, selectedCountry, selectedCurrency, catalog.brands]);
 
-  const handleSendGift = (brand: Brand) => {
+  const handleViewDetails = (brand: Brand) => {
     setSelectedBrand(brand);
     setIsModalOpen(true);
   };
@@ -139,7 +141,8 @@ const GiftCatalog: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <CartProvider>
+      <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -212,8 +215,9 @@ const GiftCatalog: React.FC = () => {
                 </select>
               </div>
 
-              {/* Clear Filters Button */}
-              <div className="flex items-center">
+              {/* Cart and Clear Filters */}
+              <div className="flex items-center gap-2">
+                <Cart />
                 <button
                   onClick={() => {
                     setSearchTerm('');
@@ -221,7 +225,7 @@ const GiftCatalog: React.FC = () => {
                     setSelectedCountry('');
                     setSelectedCurrency('');
                   }}
-                  className="w-full px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                  className="flex-1 px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200"
                 >
                   Clear Filters
                 </button>
@@ -308,7 +312,7 @@ const GiftCatalog: React.FC = () => {
               <GiftCard
                 key={brand.brandKey}
                 brand={brand}
-                onSendGift={handleSendGift}
+                onViewDetails={handleViewDetails}
               />
             ))}
           </div>
@@ -317,12 +321,13 @@ const GiftCatalog: React.FC = () => {
 
       {/* Birthday Gift Modal */}
       {isModalOpen && selectedBrand && (
-        <BirthdayGiftModal
+        <GiftCardModal
           brand={selectedBrand}
           onClose={handleCloseModal}
         />
       )}
     </div>
+    </CartProvider>
   );
 };
 
