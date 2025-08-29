@@ -15,6 +15,7 @@ const CheckoutModal = ({ onClose }: CheckoutModalProps) => {
   const [scheduledDate, setScheduledDate] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
+  const [completedOrderCost, setCompletedOrderCost] = useState(0);
 
   const getCurrencySymbol = (currencyCode: string) => {
     switch (currencyCode) {
@@ -76,6 +77,9 @@ const CheckoutModal = ({ onClose }: CheckoutModalProps) => {
     
     console.log('Completing order with:', orderData);
     
+    // Store the order cost before clearing the cart
+    setCompletedOrderCost(totalOrderCost);
+    
     setTimeout(() => {
       setIsProcessing(false);
       setOrderComplete(true);
@@ -106,7 +110,7 @@ const CheckoutModal = ({ onClose }: CheckoutModalProps) => {
                 }
               </p>
               <p className="text-sm text-gray-500 mb-6">
-                Total Budget: {getCurrencySymbol('USD')}{totalOrderCost.toFixed(2)}
+                Total Budget: {getCurrencySymbol('USD')}{completedOrderCost.toFixed(2)}
               </p>
               <button
                 onClick={onClose}
