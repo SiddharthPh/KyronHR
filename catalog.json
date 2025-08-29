@@ -1,0 +1,301 @@
+{
+  "catalogName": "Don_Testd6c0e6dc-6ed2-4013-a305-47785fe30cf8",
+  "brands": [
+    {
+      "brandKey": "B916708",
+      "brandName": "Amazon.com",
+      "disclaimer": "<p>Restrictions apply, see\u00a0<a href=\"https://www.amazon.com/gp/help/customer/display.html/ref=s9_acss_bw_tm_BGMDT7_md1_w?nodeId=3122091&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-8&pf_rd_r=1FJP0A5NSBGJC5AJC6RK&pf_rd_t=101&pf_rd_p=89081f45-f3a3-44e0-8747-edb0acca2333&pf_rd_i=17238247011\">amazon.com/gc-legal</a></p>",
+      "description": "<p>Use your\u00a0<a href=\"http://amazon.com/\">Amazon.com</a>\u00a0Gift Card* towards Books,\u00a0Electronics, Music, and\u00a0more. The\u00a0<a href=\"http://amazon.com/\">Amazon.com</a>\u00a0web site is the place to\u00a0find and discover almost\u00a0any thing you want to buy\u00a0online at a great price.</p>",
+      "shortDescription": "<p><a href=\"http://amazon.com/\">Amazon.com</a>\u00a0Gift Cards*\u00a0never expire and can\u00a0be redeemed towards\u00a0millions of items at\u00a0<a href=\"http://www.amazon.com/\">www.amazon.com</a>.</p>",
+      "imageUrls": {
+        "80w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b916708-80w-326ppi.png",
+        "130w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b916708-130w-326ppi.png",
+        "200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b916708-200w-326ppi.png",
+        "278w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b916708-278w-326ppi.png",
+        "300w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b916708-300w-326ppi.png",
+        "1200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b916708-1200w-326ppi.png"
+      },
+      "status": "active",
+      "items": [
+        {
+          "utid": "U163059",
+          "rewardName": "Amazon eGift Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "rewardType": "gift card",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "fulfillmentType": "DIGITAL",
+          "attributes": [
+            "PHONE",
+            "EMBEDDED",
+            "EMAIL"
+          ]
+        }
+      ],
+      "categories": [
+        {
+          "identifier": "e1a13abc-be00-4ff3-bb19-36d68b57cda0",
+          "description": "Marketplaces & Department Stores"
+        }
+      ]
+    },
+    {
+      "brandKey": "B942204",
+      "brandName": "Starbucks",
+      "disclaimer": "<p>The Starbucks word mark and the Starbucks Logo are trademarks of Starbucks Corporation. Starbucks is also the owner of the Copyrights in the Starbucks Logo and the Starbucks Card designs. All rights reserved. Starbucks is not a participating partner or sponsor in this offer.</p>",
+      "description": "<p>A Starbucks Card can bring a little goodness into everyone's day. Whether you want to cheer up a friend who loves her morning mocha. Or reward yourself with your favorite flavored iced tea. The Starbucks Card is a great way for you or a loved one to enjoy a slice of happiness. Redeem it at thousands of Starbucks locations. Register the Card to earn free drinks or food and other great rewards. Reload it whenever you need to.</p>",
+      "shortDescription": "<p>A Starbucks Card can bring a little goodness into everyone's day. Whether you use it for your favorite flavored iced tea or give one to a friend who loves her morning mocha. It's a great way for you or a loved one to enjoy a slice of happiness.</p>",
+      "imageUrls": {
+        "80w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b942204-80w-326ppi.png",
+        "130w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b942204-130w-326ppi.png",
+        "200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b942204-200w-326ppi.png",
+        "278w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b942204-278w-326ppi.png",
+        "300w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b942204-300w-326ppi.png",
+        "1200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b942204-1200w-326ppi.png"
+      },
+      "status": "active",
+      "items": [
+        {
+          "utid": "U761382",
+          "rewardName": "Starbucks Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "rewardType": "gift card",
+          "minValue": 5.0,
+          "maxValue": 500.0,
+          "fulfillmentType": "DIGITAL",
+          "attributes": [
+            "PHONE",
+            "EMAIL"
+          ]
+        }
+      ],
+      "categories": [
+        {
+          "identifier": "b0708bc7-7a2d-411e-93d6-6b25abd927c6",
+          "description": "Beverage"
+        }
+      ]
+    },
+    {
+      "brandKey": "B057818",
+      "brandName": "PayPal",
+      "disclaimer": "<p>PayPal is not a sponsor of the rewards or otherwise affiliated with this company. The logos and other identifying marks attached are trademarks of and owned by each represented company and/or its affiliates.  Please visit each company's website for additional terms and conditions.</p>",
+      "description": "<p>Redeem balance directly to your PayPal account. Funds are available for use within 30 minutes, usually faster.</p>",
+      "shortDescription": "<p>Redeem balance directly to your PayPal account. Funds are available for use within 30 minutes, usually faster.</p>",
+      "imageUrls": {
+        "80w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b057818-80w-326ppi.png",
+        "130w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b057818-130w-326ppi.png",
+        "200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b057818-200w-326ppi.png",
+        "278w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b057818-278w-326ppi.png",
+        "300w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b057818-300w-326ppi.png",
+        "1200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b057818-1200w-326ppi.png"
+      },
+      "status": "active",
+      "items": [
+        {
+          "utid": "U147689",
+          "rewardName": "PayPal USD",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "rewardType": "cash equivalent",
+          "minValue": 1,
+          "maxValue": 2000,
+          "fulfillmentType": "DIGITAL",
+          "attributes": [
+            "PHONE",
+            "EMAIL"
+          ]
+        }
+      ]
+    },
+    {
+      "brandKey": "B435467",
+      "brandName": "Visa Prepaid Card USD",
+      "disclaimer": "<p>Cardholder, by use or permitting the use of this card, agrees to the terms and conditions on the Cardholder Agreement. This card is issued by Evolve Bank & Trust, pursuant to a license from Visa, U.S.A., Inc.</p>",
+      "description": "<p>A Visa Prepaid Card gives you the flexibility to shop anywhere Visa debit cards are accepted around the world. You will receive an email with instructions for accessing your virtual card. Once the card is redeemed, you will have 1 year to use the funds. Use your Visa prepaid card anywhere Visa debit cards are accepted in the U.S.</p>",
+      "shortDescription": null,
+      "imageUrls": {
+        "80w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b435467-80w-326ppi.png",
+        "130w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b435467-130w-326ppi.png",
+        "200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b435467-200w-326ppi.png",
+        "278w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b435467-278w-326ppi.png",
+        "300w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b435467-300w-326ppi.png",
+        "1200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b435467-1200w-326ppi.png"
+      },
+      "status": "active",
+      "items": [
+        {
+          "utid": "U792088",
+          "rewardName": "Open Loop - Prepaid Visa - Consumer Incentive (1 year)",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "rewardType": "tango open loop",
+          "minValue": 5,
+          "maxValue": 1000,
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B077325",
+      "brandName": "Reward Link Preferred + Donations",
+      "disclaimer": "<p>Please view our full terms of service at: <a href=\"https://www.tangocard.com/legal/terms-of-service\">https://www.tangocard.com/legal/terms-of-service</a>. Individual gift cards are governed by the terms and conditions provided by the issuer of each respective card.</p>",
+      "description": "<p>Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.</p>",
+      "shortDescription": "<p>Tango Choice products are the easiest way to send rewards, incentives, and payouts. They allow your recipients to choose from catalogs of digital gift cards, prepaid cards, charitable donations, and digital payouts.</p>",
+      "imageUrls": {
+        "80w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b077325-80w-326ppi.png",
+        "130w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b077325-130w-326ppi.png",
+        "200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b077325-200w-326ppi.png",
+        "278w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b077325-278w-326ppi.png",
+        "300w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b077325-300w-326ppi.png",
+        "1200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b077325-1200w-326ppi.png"
+      },
+      "status": "active",
+      "items": [
+        {
+          "utid": "U561593",
+          "rewardName": "Reward Link Preferred + Donations",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "rewardType": "reward link",
+          "minValue": 0.01,
+          "maxValue": 2000,
+          "fulfillmentType": "DIGITAL"
+        }
+      ]
+    },
+    {
+      "brandKey": "B461344",
+      "brandName": "Always Fail",
+      "disclaimer": "<p>Always Fails</p>\\r\\n",
+      "description": "<p>Always Fails</p>\\r\\n",
+      "shortDescription": "<p>Always Fails</p>\\r\\n",
+      "terms": "<p>Always Fails</p>\\r\\n",
+      "createdDate": "2020-09-30T23:05:24Z",
+      "lastUpdateDate": "2024-05-21T17:43:52Z",
+      "brandRequirements": {
+        "displayInstructions": "<p>An Always Fail Item</p>\\r\\n",
+        "termsAndConditionsInstructions": "<p>Always Fails</p>\\r\\n",
+        "disclaimerInstructions": "<p>Always Fails</p>\\r\\n",
+        "alwaysShowDisclaimer": false
+      },
+      "imageUrls": {
+        "80w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b461344-80w-326ppi.png",
+        "130w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b461344-130w-326ppi.png",
+        "200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b461344-200w-326ppi.png",
+        "278w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b461344-278w-326ppi.png",
+        "300w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b461344-300w-326ppi.png",
+        "1200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b461344-1200w-326ppi.png"
+      },
+      "status": "active",
+      "items": [
+        {
+          "utid": "U923469",
+          "rewardName": "Always Fail Reward Link",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "rewardType": "reward link",
+          "isExpirable": false,
+          "quantityConstraints": {
+            "minQuantity": 1,
+            "maxQuantity": 5000
+          },
+          "isWholeAmountValueRequired": false,
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "createdDate": "2024-05-21T17:58:47.215Z",
+          "lastUpdateDate": "2025-08-07T20:32:01.328Z",
+          "countries": [
+            "US"
+          ],
+          "credentialTypes": [
+            "expirationDate",
+            "redemptionUrl"
+          ],
+          "redemptionInstructions": "<p>always-fail-503</p>\\r\\n",
+          "itemAvailability": {
+            "itemAvailabilityStatus": "AVAILABLE"
+          },
+          "fulfillmentType": "DIGITAL",
+          "attributes": []
+        }
+      ],
+      "categories": []
+    },
+    {
+      "brandKey": "B644898",
+      "brandName": "Amazon.co.uk",
+      "disclaimer": "<p>*Restrictions apply. For complete terms and conditions, visit:\\u00a0<a href=\\\"http://www.amazon.co.uk/gc-legal\\\">www.amazon.co.uk/gc-legal</a>.</p>\\r\\n",
+      "description": "<p>Amazon.co.uk Gift Cards* can be redeemed towards millions of items at www.amazon.co.uk. Amazon.co.uk's huge selection includes products in Books, Electronics, Music, MP3 Downloads, Film & TV, Clothing, Video Games, Software, Sports & Outdoors, Toys, Baby, Computers & Office, Home & Garden, Jewellery, Beauty, DIY & Home Improvement, Office Products, Camera & Photo, Pet Supplies, and more. Amazon.co.uk is the place to find and discover almost anything you want to buy online at a great price.</p>\\r\\n",
+      "shortDescription": "<p>Amazon.co.uk Gift Cards* can be redeemed towards millions of items at <a href=\\\"http://www.amazon.co.uk\\\">www.amazon.co.uk</a>.</p>\\r\\n",
+      "terms": "<p>*<a href=\\\"https://www.amazon.co.uk/\\\">Amazon.co.uk </a>Gift Cards (\\u201dGCs\\u201d) may be used only for the purchase of eligible products on Amazon.co.uk and certain of its affiliated websites. GCs cannot be resold, transferred for value, redeemed for cash or refunded, except as required by law. GCs have a 10 year validity period from the date of issuance. For complete terms and conditions, see <a href=\\\"https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=200272910\\\">amazon.co.uk/gc-legal</a>. No service fees.</p>",
+      "createdDate": "2016-07-12T23:53:33Z",
+      "lastUpdateDate": "2024-05-06T19:33:50Z",
+      "brandRequirements": {
+        "displayInstructions": "<ol>\\r\\n\\t<li><strong>Guidelines for use of the logo:\\u00a0</strong>\\u00a0The logos and graphics can not be changed in any way and must be used according to the\\u00a0usage\\u00a0guidelines available at\\u00a0<a href=\\\"https://www.amazon.co.uk/b?node=14235247031\\\">https://www.amazon.co.uk/b?node=14235247031</a>.\\u00a0\\u00a0Download our logos from the \\\"Additional Resources\\\" section.\\u00a0 Please only use the logos provided on this page.</li>\\r\\n\\t<li><strong>Use the correct product name:</strong>\\u00a0 \\\"Amazon.co.uk Gift Card\\\" is our name.\\u00a0 Our three-word product name is always capitalized and should not be broken up.\\u00a0 It is not a gift certificate or e-gift card. If you are describing the gift card value display the pound amount first \\u201c\\u00a3XX\\u00a0<a href=\\\"http://amazon.co.uk/\\\">Amazon.co.uk</a>\\u00a0Gift Card\\u201d.</li>\\r\\n\\t<li><strong>Display the disclaimer:\\u00a0</strong>\\u00a0When using our logo or product name, please always display the following disclaimer: \\\"*Restrictions apply. For complete terms and conditions, visit:\\u00a0<a href=\\\"https://www.amazon.de/gp/help/customer/display.html/ref=s9_acss_bw_cg_GCBCDTM_md1_w?nodeId=505028&pf_rd_m=A3JWKAKR8XB7XF&pf_rd_s=merchandised-search-1&pf_rd_r=PYRMZX6Z9K41WE13H40E&pf_rd_t=101&pf_rd_p=bc3e74fb-34f0-4efb-b327-851efc3bddc4&pf_rd_i=14235495031\\\">amazon.com/gc-legal</a>.\\\"</li>\\r\\n\\t<li><strong>Amazon is not a sponsor:</strong>\\u00a0\\u00a0Your use of the Amazon brand should not imply partnership or sponsorship.\\u00a0 You agree not to misrepresent the relationship between Amazon and your business.</li>\\r\\n\\t<li><strong>Nothing is \\\"free\\\":\\u00a0\\u00a0</strong>No statements can refer to the vouchers for free, free or for free as these terms have strong implications for customers.</li>\\r\\n\\t<li><strong>Subject Line:</strong>\\u00a0 If you deliver the Amazon.co.uk Gift Card by email, the\\u00a0Subject Line cannot\\u00a0imply that Amazon has sent the gift card.\\u00a0 An example of a\\u00a0GOOD\\u00a0Subject Line is: \\\"MyCompany sent you an Amazon.co.uk Gift Card!\\\"\\u00a0 An example of a\\u00a0BAD Subject Line is:\\u00a0 \\\"Amazon.co.uk sent you a gift card!\\\"</li>\\r\\n</ol>\\r\\n",
+        "termsAndConditionsInstructions": "",
+        "disclaimerInstructions": "",
+        "alwaysShowDisclaimer": false
+      },
+      "imageUrls": {
+        "80w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-80w-326ppi.png",
+        "130w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-130w-326ppi.png",
+        "200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-200w-326ppi.png",
+        "278w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-278w-326ppi.png",
+        "300w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-300w-326ppi.png",
+        "1200w-326ppi": "https://dwwvg90koz96l.cloudfront.net/images/brands/b314742-1200w-326ppi.png"
+      },
+      "status": "active",
+      "items": [
+        {
+          "utid": "U173016",
+          "rewardName": "Amazon.co.uk Gift Card",
+          "currencyCode": "GBP",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "rewardType": "gift card",
+          "isExpirable": true,
+          "quantityConstraints": {
+            "minQuantity": 1,
+            "maxQuantity": 5000
+          },
+          "isWholeAmountValueRequired": false,
+          "minValue": 0.01,
+          "maxValue": 1000,
+          "createdDate": "2021-11-04T21:00:21.283Z",
+          "lastUpdateDate": "2021-11-22T18:45:43.956Z",
+          "countries": [
+            "GB",
+            "IE"
+          ],
+          "credentialTypes": [
+            "cardNumber",
+            "expirationDate",
+            "rewardSecurityCode",
+            "rewardSecurityUrl"
+          ],
+          "redemptionInstructions": "<p>Click the Redemption URL and enter Security Code to access the redemption instructions on the landing page. <strong>Please note: the Security Code above is not the rewards Claim Code used at checkout. Please only use the Claim Code provided on the following landing page.</strong></p>",
+          "itemAvailability": {
+            "itemAvailabilityStatus": "AVAILABLE"
+          },
+          "fulfillmentType": "DIGITAL",
+          "attributes": []
+        }
+      ],
+      "categories": [
+        {
+          "identifier": "e1a13abc-be00-4ff3-bb19-36d68b57cda0",
+          "description": "Marketplaces & Department Stores"
+        }
+      ]
+    }
+  ]
+}

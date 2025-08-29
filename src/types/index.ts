@@ -108,3 +108,53 @@ export interface Department {
   managerId: string;
   employeeCount: number;
 }
+
+export interface Incentive {
+  id: string;
+  recipientId: string;
+  recipientName: string;
+  recipientEmail: string;
+  managerId: string;
+  managerName: string;
+  type: 'spot_bonus' | 'achievement' | 'exceptional_performance' | 'team_player' | 'innovation' | 'customer_service';
+  amount: number;
+  giftCardBrand: string;
+  giftCardUtid: string;
+  reason: string;
+  message?: string;
+  status: 'pending' | 'approved' | 'sent' | 'delivered' | 'failed';
+  createdDate: string;
+  approvedDate?: string;
+  sentDate?: string;
+  orderReference?: string;
+  externalRefId?: string;
+}
+
+export interface IncentiveCampaign {
+  id: string;
+  name: string;
+  description: string;
+  type: 'manager_recognition' | 'goal_completion' | 'custom';
+  status: 'active' | 'paused' | 'completed';
+  budget: number;
+  usedBudget: number;
+  startDate: string;
+  endDate?: string;
+  eligibleDepartments: string[];
+  defaultAmount: number;
+  approvalRequired: boolean;
+  createdBy: string;
+  createdDate: string;
+}
+
+export interface GiftCard {
+  brandKey: string;
+  brandName: string;
+  utid: string;
+  rewardName: string;
+  minValue: number;
+  maxValue: number;
+  imageUrl: string;
+  description: string;
+  fulfillmentType: string;
+}

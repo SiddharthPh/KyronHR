@@ -5,6 +5,7 @@ import {
   UserPlusIcon,
   ChartBarIcon,
   CalendarIcon,
+  GiftIcon,
   CogIcon
 } from '@heroicons/react/24/outline';
 
@@ -13,6 +14,7 @@ const navigation = [
   { name: 'Employee Directory', href: '/employees', icon: UsersIcon },
   { name: 'Onboarding/Offboarding', href: '/boarding', icon: UserPlusIcon },
   { name: 'Performance & Goals', href: '/performance', icon: ChartBarIcon },
+  { name: 'Employee Incentives', href: '/incentives', icon: GiftIcon },
   { name: 'Time-Off Management', href: '/timeoff', icon: CalendarIcon },
   { name: 'Settings', href: '/settings', icon: CogIcon },
 ];

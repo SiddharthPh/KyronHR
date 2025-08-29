@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import EmployeeDirectory from './pages/EmployeeDirectory';
 import BoardingManagement from './pages/BoardingManagement';
 import PerformanceGoals from './pages/PerformanceGoals';
+import EmployeeIncentives from './pages/EmployeeIncentives';
 import TimeOffManagement from './pages/TimeOffManagement';
 import Settings from './pages/Settings';
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="employees" element={<EmployeeDirectory />} />
           <Route path="boarding" element={<BoardingManagement />} />
           <Route path="performance" element={<PerformanceGoals />} />
+          <Route path="incentives" element={<EmployeeIncentives />} />
           <Route path="timeoff" element={<TimeOffManagement />} />
           <Route path="settings" element={<Settings />} />
         </Route>
