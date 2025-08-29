@@ -5,7 +5,8 @@ import {
   StarIcon,
   ClockIcon,
   CheckCircleIcon,
-  XMarkIcon 
+  XMarkIcon,
+  GiftIcon
 } from '@heroicons/react/24/outline';
 import { StarIcon as StarIconSolid } from '@heroicons/react/24/solid';
 import { mockGoals, mockEmployees } from '../data/mockData';
@@ -154,6 +155,12 @@ export default function PerformanceGoals() {
                 <button className="btn-primary text-xs py-1 px-3">
                   Update Progress
                 </button>
+                {goal.status === 'completed' && (
+                  <button className="btn-secondary text-xs py-1 px-3 flex items-center space-x-1">
+                    <GiftIcon className="w-3 h-3" />
+                    <span>Send Recognition</span>
+                  </button>
+                )}
               </div>
             </div>
 
