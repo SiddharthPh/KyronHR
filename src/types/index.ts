@@ -21,6 +21,50 @@ export interface Employee {
   };
 }
 
+// Gift Card System Types
+export interface GiftCardItem {
+  utid: string;
+  rewardName: string;
+  currencyCode: string;
+  status: string;
+  valueType: 'VARIABLE_VALUE' | 'FIXED_VALUE';
+  minValue: number;
+  maxValue: number;
+  fulfillmentType: 'DIGITAL' | 'PHYSICAL';
+  countries: string[];
+  category: string;
+}
+
+export interface GiftCardBrand {
+  brandKey: string;
+  brandName: string;
+  disclaimer: string;
+  description: string;
+  brandLogoUrl: string;
+  status: string;
+  items: GiftCardItem[];
+}
+
+export interface GiftCatalog {
+  catalogName: string;
+  brands: GiftCardBrand[];
+}
+
+export interface CartItem {
+  brand: GiftCardBrand;
+  item: GiftCardItem;
+  amount: number;
+  quantity: number;
+  recipient?: {
+    employeeId: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+  };
+  message?: string;
+  purpose: 'birthday' | 'performance' | 'anniversary' | 'appreciation' | 'custom';
+}
+
 export interface Goal {
   id: string;
   employeeId: string;
