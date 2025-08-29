@@ -1,0 +1,181 @@
+{
+  "catalogName": "Employee Incentives Catalog",
+  "brands": [
+    {
+      "brandKey": "amazon",
+      "brandName": "Amazon",
+      "disclaimer": "Amazon.com is not a sponsor of this promotion.",
+      "description": "Shop millions of products on Amazon",
+      "brandLogoUrl": "https://cdn.tangocard.com/logos/amazon-logo.png",
+      "status": "active",
+      "items": [
+        {
+          "utid": "U123001",
+          "rewardName": "Amazon.com Gift Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "minValue": 1,
+          "maxValue": 2000,
+          "fulfillmentType": "DIGITAL",
+          "countries": ["US"],
+          "category": "Retail"
+        }
+      ]
+    },
+    {
+      "brandKey": "starbucks",
+      "brandName": "Starbucks",
+      "disclaimer": "Starbucks® is a registered trademark of Starbucks Corporation.",
+      "description": "Fuel your day with Starbucks coffee",
+      "brandLogoUrl": "https://cdn.tangocard.com/logos/starbucks-logo.png",
+      "status": "active",
+      "items": [
+        {
+          "utid": "U123002",
+          "rewardName": "Starbucks Digital Gift Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "minValue": 5,
+          "maxValue": 500,
+          "fulfillmentType": "DIGITAL",
+          "countries": ["US"],
+          "category": "Food & Beverage"
+        }
+      ]
+    },
+    {
+      "brandKey": "target",
+      "brandName": "Target",
+      "disclaimer": "Target and the Bullseye Design are registered trademarks of Target Brands, Inc.",
+      "description": "Shop for everything at Target",
+      "brandLogoUrl": "https://cdn.tangocard.com/logos/target-logo.png",
+      "status": "active",
+      "items": [
+        {
+          "utid": "U123003",
+          "rewardName": "Target GiftCard",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "minValue": 5,
+          "maxValue": 500,
+          "fulfillmentType": "DIGITAL",
+          "countries": ["US"],
+          "category": "Retail"
+        }
+      ]
+    },
+    {
+      "brandKey": "apple",
+      "brandName": "Apple",
+      "disclaimer": "Apple is not a sponsor of this promotion.",
+      "description": "For everything and everyone. Apple Gift Cards can be used on the App Store, Apple TV, Apple Music, iTunes, Apple Arcade, the Apple Store app, apple.com, and at Apple Store locations.",
+      "brandLogoUrl": "https://cdn.tangocard.com/logos/apple-logo.png",
+      "status": "active",
+      "items": [
+        {
+          "utid": "U123004",
+          "rewardName": "Apple Gift Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "minValue": 5,
+          "maxValue": 500,
+          "fulfillmentType": "DIGITAL",
+          "countries": ["US"],
+          "category": "Technology"
+        }
+      ]
+    },
+    {
+      "brandKey": "visa",
+      "brandName": "Visa",
+      "disclaimer": "Visa is a registered trademark of Visa International Service Association.",
+      "description": "The gift of choice. Use anywhere Visa debit cards are accepted.",
+      "brandLogoUrl": "https://cdn.tangocard.com/logos/visa-logo.png",
+      "status": "active",
+      "items": [
+        {
+          "utid": "U123005",
+          "rewardName": "Visa Reward Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "minValue": 5,
+          "maxValue": 500,
+          "fulfillmentType": "DIGITAL",
+          "countries": ["US"],
+          "category": "Prepaid Cards"
+        }
+      ]
+    },
+    {
+      "brandKey": "netflix",
+      "brandName": "Netflix",
+      "disclaimer": "Netflix is a registered trademark of Netflix, Inc.",
+      "description": "Watch TV shows and movies anytime, anywhere",
+      "brandLogoUrl": "https://cdn.tangocard.com/logos/netflix-logo.png",
+      "status": "active",
+      "items": [
+        {
+          "utid": "U123006",
+          "rewardName": "Netflix Gift Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "minValue": 15,
+          "maxValue": 200,
+          "fulfillmentType": "DIGITAL",
+          "countries": ["US"],
+          "category": "Entertainment"
+        }
+      ]
+    },
+    {
+      "brandKey": "uber",
+      "brandName": "Uber",
+      "disclaimer": "Uber and the Uber logo are trademarks of Uber Technologies, Inc.",
+      "description": "Get a ride or order food with Uber",
+      "brandLogoUrl": "https://cdn.tangocard.com/logos/uber-logo.png",
+      "status": "active",
+      "items": [
+        {
+          "utid": "U123007",
+          "rewardName": "Uber Gift Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "minValue": 5,
+          "maxValue": 200,
+          "fulfillmentType": "DIGITAL",
+          "countries": ["US"],
+          "category": "Transportation"
+        }
+      ]
+    },
+    {
+      "brandKey": "walmart",
+      "brandName": "Walmart",
+      "disclaimer": "Walmart Inc. is not a sponsor of this promotion.",
+      "description": "Save money. Live better. Shop at Walmart.",
+      "brandLogoUrl": "https://cdn.tangocard.com/logos/walmart-logo.png",
+      "status": "active",
+      "items": [
+        {
+          "utid": "U123008",
+          "rewardName": "Walmart eGift Card",
+          "currencyCode": "USD",
+          "status": "active",
+          "valueType": "VARIABLE_VALUE",
+          "minValue": 5,
+          "maxValue": 500,
+          "fulfillmentType": "DIGITAL",
+          "countries": ["US"],
+          "category": "Retail"
+        }
+      ]
+    }
+  ]
+}
