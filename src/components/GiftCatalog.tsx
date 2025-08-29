@@ -109,12 +109,51 @@ const GiftCatalog: React.FC = () => {
 
   const catalog = catalogData as Catalog;
 
+  // Country code to name mapping for better UX (only countries with gift cards available)
+  const countryNames: Record<string, string> = {
+    'US': 'United States',
+    'GB': 'United Kingdom', 
+    'IE': 'Ireland',
+    'IT': 'Italy',
+    'MY': 'Malaysia',
+    'AU': 'Australia',
+    'FR': 'France',
+    'MX': 'Mexico',
+    'PL': 'Poland',
+    'CA': 'Canada',
+    'DE': 'Germany',
+    'NL': 'Netherlands',
+    'ES': 'Spain',
+    'BR': 'Brazil',
+    'IN': 'India',
+    'JP': 'Japan',
+    'SG': 'Singapore',
+    'HK': 'Hong Kong'
+  };
+
+  // Currency code to name mapping for better UX (only currencies actually used)
+  const currencyNames: Record<string, string> = {
+    'USD': 'US Dollar',
+    'EUR': 'Euro', 
+    'GBP': 'British Pound',
+    'AUD': 'Australian Dollar',
+    'MYR': 'Malaysian Ringgit',
+    'MXN': 'Mexican Peso',
+    'PLN': 'Polish Zloty'
+  };
+
   // Extract unique countries and currencies from catalog
   const availableCountries = useMemo(() => {
     const countries = new Set<string>();
     catalog.brands.forEach(brand => {
       brand.items?.forEach(item => {
-        item.countries?.forEach(country => countries.add(country));
+        if (item.countries && Array.isArray(item.countries)) {
+          item.countries.forEach(country => {
+            if (country && country.trim()) {
+              countries.add(country.trim());
+            }
+          });
+        }
       });
     });
     return Array.from(countries).sort();
@@ -124,8 +163,8 @@ const GiftCatalog: React.FC = () => {
     const currencies = new Set<string>();
     catalog.brands.forEach(brand => {
       brand.items?.forEach(item => {
-        if (item.currencyCode) {
-          currencies.add(item.currencyCode);
+        if (item.currencyCode && item.currencyCode.trim()) {
+          currencies.add(item.currencyCode.trim());
         }
       });
     });
@@ -134,17 +173,26 @@ const GiftCatalog: React.FC = () => {
 
   const filteredBrands = useMemo(() => {
     return catalog.brands.filter(brand => {
-      const matchesSearch = brand.brandName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          brand.description.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === '' || brand.category === selectedCategory;
+      // Search filter
+      const matchesSearch = !searchTerm || 
+        brand.brandName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (brand.description && brand.description.toLowerCase().includes(searchTerm.toLowerCase()));
       
-      // Check if brand has items that match the selected country
-      const matchesCountry = selectedCountry === '' || 
-        brand.items?.some(item => item.countries?.includes(selectedCountry));
+      // Category filter
+      const matchesCategory = !selectedCategory || brand.category === selectedCategory;
       
-      // Check if brand has items that match the selected currency
-      const matchesCurrency = selectedCurrency === '' || 
-        brand.items?.some(item => item.currencyCode === selectedCurrency);
+      // Country filter - check if ANY item in the brand matches the selected country
+      const matchesCountry = !selectedCountry || 
+        (brand.items && brand.items.some(item => 
+          item.countries && Array.isArray(item.countries) && 
+          item.countries.includes(selectedCountry)
+        ));
+      
+      // Currency filter - check if ANY item in the brand matches the selected currency
+      const matchesCurrency = !selectedCurrency || 
+        (brand.items && brand.items.some(item => 
+          item.currencyCode === selectedCurrency
+        ));
       
       return matchesSearch && matchesCategory && matchesCountry && matchesCurrency;
     });
@@ -215,7 +263,9 @@ const GiftCatalog: React.FC = () => {
                 >
                   <option value="">All Countries</option>
                   {availableCountries.map(country => (
-                    <option key={country} value={country}>{country}</option>
+                    <option key={country} value={country}>
+                      {countryNames[country] ? `${countryNames[country]} (${country})` : country}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -230,7 +280,9 @@ const GiftCatalog: React.FC = () => {
                 >
                   <option value="">All Currencies</option>
                   {availableCurrencies.map(currency => (
-                    <option key={currency} value={currency}>{currency}</option>
+                    <option key={currency} value={currency}>
+                      {currencyNames[currency] ? `${currencyNames[currency]} (${currency})` : currency}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -261,8 +313,8 @@ const GiftCatalog: React.FC = () => {
           <p className="text-gray-600">
             Showing {filteredBrands.length} of {catalog.totalBrands} rewards
             {selectedCategory && ` in "${selectedCategory}"`}
-            {selectedCountry && ` for "${selectedCountry}"`}
-            {selectedCurrency && ` in "${selectedCurrency}"`}
+            {selectedCountry && ` for "${countryNames[selectedCountry] || selectedCountry}"`}
+            {selectedCurrency && ` in "${currencyNames[selectedCurrency] || selectedCurrency}"`}
             {searchTerm && ` matching "${searchTerm}"`}
           </p>
           
@@ -282,7 +334,7 @@ const GiftCatalog: React.FC = () => {
               )}
               {selectedCountry && (
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                  Country: {selectedCountry}
+                  Country: {countryNames[selectedCountry] || selectedCountry}
                   <button
                     onClick={() => setSelectedCountry('')}
                     className="ml-1 text-green-600 hover:text-green-800"
@@ -293,7 +345,7 @@ const GiftCatalog: React.FC = () => {
               )}
               {selectedCurrency && (
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                  Currency: {selectedCurrency}
+                  Currency: {currencyNames[selectedCurrency] || selectedCurrency}
                   <button
                     onClick={() => setSelectedCurrency('')}
                     className="ml-1 text-purple-600 hover:text-purple-800"
