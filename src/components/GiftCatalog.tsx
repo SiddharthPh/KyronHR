@@ -17,12 +17,12 @@ const GiftCard: React.FC<{ brand: Brand; onViewDetails: (brand: Brand) => void }
   const currencySymbol = item.currencyCode === 'USD' ? '$' : item.currencyCode === 'EUR' ? '€' : '£';
   
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-      <div className="aspect-w-16 aspect-h-9 bg-gray-50 p-6 flex items-center justify-center">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full flex flex-col">
+      <div className="bg-gray-50 p-4 flex items-center justify-center h-20 flex-shrink-0">
         <img
           src={brand.imageUrl}
           alt={brand.brandName}
-          className="max-h-20 max-w-full object-contain"
+          className="max-h-16 max-w-full object-contain"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(`
@@ -37,39 +37,59 @@ const GiftCard: React.FC<{ brand: Brand; onViewDetails: (brand: Brand) => void }
         />
       </div>
       
-      <div className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{brand.brandName}</h3>
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">{brand.description}</p>
-        
-        <div className="space-y-3 mb-4">
-          <div className="flex items-center justify-between">
-            <div className="text-sm">
-              <span className="text-gray-500">Value Range:</span>
-              <div className="font-medium text-kyron-primary">
-                {currencySymbol}{item.minValue} - {currencySymbol}{item.maxValue}
-              </div>
-            </div>
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-kyron-primary/10 text-kyron-primary">
-              {brand.category}
-            </span>
+      <div className="p-4 flex flex-col flex-grow">
+        <div className="space-y-3 flex-grow">
+          {/* Row 1: Brand Name */}
+          <div className="border-b border-gray-100 pb-2">
+            <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Brand Name</div>
+            <div className="text-lg font-semibold text-gray-900 truncate">{brand.brandName}</div>
           </div>
           
-          {/* Currency and Countries Info */}
-          <div className="flex items-center justify-between text-xs text-gray-500">
-            <div className="flex items-center gap-1">
-              <DollarSign className="w-3 h-3" />
-              <span>{item.currencyCode}</span>
+          {/* Row 2: Brand Description */}
+          <div className="border-b border-gray-100 pb-2">
+            <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Description</div>
+            <div className="text-sm text-gray-600 line-clamp-2 leading-relaxed h-10 overflow-hidden">
+              {brand.description || 'No description available'}
             </div>
-            <div className="flex items-center gap-1">
-              <Globe className="w-3 h-3" />
-              <span>{item.countries?.slice(0, 3).join(', ')}{item.countries && item.countries.length > 3 ? ` +${item.countries.length - 3}` : ''}</span>
+          </div>
+          
+          {/* Row 3: Value Range */}
+          <div className="border-b border-gray-100 pb-2">
+            <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Value Range</div>
+            <div className="text-lg font-bold text-kyron-primary">
+              {currencySymbol}{item.minValue} - {currencySymbol}{item.maxValue}
+            </div>
+          </div>
+          
+          {/* Row 4: Category */}
+          <div className="border-b border-gray-100 pb-2">
+            <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Category</div>
+            <div className="inline-flex items-center px-2.5 py-1 rounded-full text-sm font-medium bg-kyron-primary/10 text-kyron-primary">
+              {brand.category}
+            </div>
+          </div>
+          
+          {/* Row 5: Currency and Country */}
+          <div className="pb-2">
+            <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">Currency & Country</div>
+            <div className="flex items-center justify-between text-sm">
+              <div className="flex items-center gap-1 text-gray-700">
+                <DollarSign className="w-4 h-4" />
+                <span className="font-medium">{item.currencyCode}</span>
+              </div>
+              <div className="flex items-center gap-1 text-gray-700">
+                <Globe className="w-4 h-4" />
+                <span className="font-medium truncate">
+                  {item.countries?.slice(0, 2).join(', ')}{item.countries && item.countries.length > 2 ? ` +${item.countries.length - 2}` : ''}
+                </span>
+              </div>
             </div>
           </div>
         </div>
         
         <button
           onClick={() => onViewDetails(brand)}
-          className="w-full bg-kyron-primary text-white py-2 px-4 rounded-lg font-medium hover:bg-kyron-primary/90 transition-colors duration-200 flex items-center justify-center gap-2"
+          className="w-full bg-kyron-primary text-white py-2.5 px-4 rounded-lg font-medium hover:bg-kyron-primary/90 transition-colors duration-200 flex items-center justify-center gap-2 mt-4 flex-shrink-0"
         >
           <Gift className="w-4 h-4" />
           View Details
